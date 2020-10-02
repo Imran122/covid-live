@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'eqz_&)pod(+o(r9u9vk!t)4@qg7=&y=48^0r)(27!=(hp6h3)f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['covid-assessment-system.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['covid-assessment-system.herokuapp.com']
 
 
 # Application definition
