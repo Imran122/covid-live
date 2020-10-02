@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+   {% block content %}
+   
+<div class="container">
+  <h2>Assessment System Table Data</h2>
+  <p>showing all records of Tests: </p> 
+ <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Temprature</th>
+        <th>Assessment Date</th>
+        <th>Assessment Score</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for test in all_test %} 
+      <tr>
+        <td>{{ test.name }}</td>
+        <td>{{test.age}}</td>
+        <td>{{test.sex}}</td>
+        <td>{{test.temperature}} *C</td>
+        <td>{{test.date | date:"F d Y"}}</td>
+        <td>{{test.score}}</td>
+        <td>{{test.result}}</td>
+      </tr>
+ {% endfor %}
+    </tbody>
+  </table>
+ </div>
+</div>
+
+           <!-- end home  -->
+   {% endblock %}
